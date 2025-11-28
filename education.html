@@ -1,0 +1,104 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Hub - Diabetic Delight</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="logo">Diabetic Delight</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="marketplace.html">Marketplace</a></li>
+      <li><a href="subscription.html">Subscription Boxes</a></li>
+      <li><a href="education.html" class="active">Education Hub</a></li>
+      <li><a href="community.html">Community Hub</a></li>
+      <li><a href="pricing.html">Pricing Plans</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="help.html">Help Centre</a></li>
+    </ul>
+    <div class="cta-buttons">
+      <a href="subscription.html" class="btn btn-primary">Join Now</a>
+    </div>
+    <div class="mobile-menu-toggle">☰</div>
+  </nav>
+</header>
+
+<section class="education">
+  <div class="container">
+    <h1>Education Hub</h1>
+    
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="type1">Understanding Type 1 & 2</button>
+      <button class="tab-btn" data-tab="nutrition">Nutrition & Glucose</button>
+      <button class="tab-btn" data-tab="lifestyle">Lifestyle Tips</button>
+    </div>
+
+    <div class="tab-content active" id="type1">
+      <h2>Understanding Diabetes</h2>
+      <p>Learn the differences between Type 1 and Type 2 diabetes and how to manage them effectively.</p>
+      <video controls width="400">
+        <source src="images/video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="tab-content" id="nutrition">
+      <h2>Nutrition & Glucose Management</h2>
+      <p>Discover dietary strategies, low GI foods, and meal planning tips for diabetics.</p>
+      <video controls width="400">
+        <source src="images/video2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="tab-content" id="lifestyle">
+      <h2>Lifestyle Tips</h2>
+      <p>Exercise, mindfulness, and healthy routines for people living with diabetes.</p>
+      <video controls width="400">
+        <source src="images/video3.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <h2>Upcoming Webinars</h2>
+    <div class="webinar-grid">
+      <div class="webinar-card">
+        <h3>Managing Sugar Levels</h3>
+        <p>By Dr. Jane Smith | 1 Dec 2025 | <a href="#">RSVP</a></p>
+      </div>
+      <div class="webinar-card">
+        <h3>Diabetic-Friendly Recipes</h3>
+        <p>By Nutrition Experts | 15 Dec 2025 | <a href="#">RSVP</a></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <p>&copy; 2025 Diabetic Delight | <a href="privacy.html">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+  // Tabs
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
