@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Centre - Diabetic Delight</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="logo">Diabetic Delight</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="marketplace.html">Marketplace</a></li>
+      <li><a href="subscription.html">Subscription Boxes</a></li>
+      <li><a href="education.html">Education Hub</a></li>
+      <li><a href="community.html">Community Hub</a></li>
+      <li><a href="pricing.html">Pricing Plans</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="help.html" class="active">Help Centre</a></li>
+    </ul>
+    <div class="cta-buttons">
+      <a href="subscription.html" class="btn btn-primary">Join Now</a>
+    </div>
+    <div class="mobile-menu-toggle">☰</div>
+  </nav>
+</header>
+
+<section class="help">
+  <div class="container">
+    <h1>Help Centre & Support</h1>
+
+    <!-- FAQ Accordion -->
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-question">How do I subscribe to a box?</button>
+        <div class="faq-answer">
+          <p>Go to the Subscription Boxes page, choose your plan, and click 'Start Plan'.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What payment methods are accepted?</button>
+        <div class="faq-answer">
+          <p>We accept all major credit cards and PayPal. All prices are in £.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I cancel my subscription anytime?</button>
+        <div class="faq-answer">
+          <p>Yes! You can cancel or change your subscription directly from your account.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+
+    <p>Or email us directly at <a href="mailto:support@diabeticdelight.com">support@diabeticdelight.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <p>&copy; 2025 Diabetic Delight | <a href="privacy.html">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+  // FAQ accordion
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+</script>
+</body>
+</html>
+
